@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>COVID-19 Simulation Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">COVID-19 Simulation Project</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Main Page</a></li>
+							<li class="active"><a href="covidsim.html">COVID-19 Simulation Project</a></li>
+							
+						</ul>
+						<ul class="icons">
+								<!--TODO ADD LINKS-->
+								<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1>COVID-19 Simulation Project</h1>
+									<p>The idea of this project was to create simulate a virus in an intuitive playful way. This project has been realized with C# and Unity.</p>
+								</header>
+								<div class="image main"><img src="images/covidsim/Screenshot_1.png" alt="" /></div>
+								<p>With this program one can build his own world and start the spreading of a virus.</p>
+								<div class="image main"><img src="images/covidsim/Screenshot_2.png" alt="" /></div>
+								<p>One can enable a line graph and/or a barchart to monitor the spreading of the virus in runtime. Values, like how many persons are infected in a day and the r-value, can also be saved in a csv file for further analyses.</p>
+								<div class="image main"><img src="images/covidsim/Screenshot_3.png" alt="" /></div>
+								<p>One can place three kind of objects in the world and adjust different parameters for each object.</p>
+								<div class="image main"><img src="images/covidsim/Screenshot_4.png" alt="" /></div>
+								<p>For each object one can monitor the amount of recovered and uninfected persons (green), infected (orange) and infectious (red) people.</p>
+								<div class="image main"><img src="images/covidsim/Screenshot_5.png" alt="" /></div>
+								<p>Different global simulation parameters can be set. The default values are taken from the <i>Robert Koch-Institut</i>.</p>
+								
+
+								<!--Simulation logic-->
+								<h2>Simulation logic</h2>
+								<pre>
+									<code>
+The infection event
+● Comparison of each person p in the place (venue) with a person i
+and each person has a risk of infection r
+● p is arbitrary and not infected
+● i is infected and is not in hospitalisation
+There is a "Carefulnessfactor" c and an "InfectionRiskFactor" r.
+"InfectionRiskFactor" v of the point of encounter
+c is defined as the average of the "carefulness" of i and p
+c and v are mapped to a value between ½ and 2
+
+→ Then the probability of infection is
+p(p becomes infected) = r * v * c * g * m
+→ g scales the infection event
+→ With m ("maskFactor"), the wearing of a mask is taken into account.									
+									</code>
+								</pre>
+
+
+								<h3>Simulation sequence</h3>
+								<ul>
+									<li>Iterate over all the meeting points and simulate a
+										possible meeting and infection event</li>
+									<li>Add 10 minutes to the simulation date (1.1.2020)</li>
+									<li>Iterate over all living persons of all
+										households</li>
+									<li>Update infection phases and health status
+										of the person under consideration</li>
+									<li>Skip deceased person</li>
+									<li>Take the person to the hospital if
+										necessary</li>
+									<li>Quarantine the person if necessary</li>
+									<li>Take the person home if symptoms
+										are present</li>
+									<li>Try to assign an activity to a person</li>
+									<li>Take person home if they have no activity</li>
+									<li>Test person if activity requires it</li>
+								</ul>
+
+								<!-- Blockquote -->
+								<h2>Github link</h2>
+								<blockquote><a href="https://github.com/TheBlur98/SimulationUndVisualisierung" target="_blank">COVID-19 Simulation Project</a></blockquote>
+
+								<hr />
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+
+						<section class="split contact">
+						
+
+
+							<!-- TODO
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+						-->
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
