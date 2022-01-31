@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ZooManagementSoftware</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">GraphNetworkModel</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Main Page</a></li>
+							
+							
+						</ul>
+						<ul class="icons">
+								
+								<li><a href="https://github.com/MustaphaOuchen" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://github.com/TheBlur98" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<!--<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h3>GraphNetworkModel</h3>
+									<p>CLI-Tool which outputs the number of nodes, number of edges, vertex names, and edge names. The connectivity, diameter,
+										betweenness centrality measure of the graph and the shortest path between a pair or all nodes can be calculated with this program.
+										This program takes a <i>.graphml</i> file as input and can output a custom <i>.graphml</i> file with the calculated information.
+									</p>
+									</p>
+								</header>
+
+								<div class="image main"><img src="images/networkgraph/small_graph.PNG" alt="" /></div>
+								
+								<!--Arguments-->
+								<h2>Usage</h2>
+								<pre>
+									<code>
+Commands:
+●	java -jar JavaProgram.jar
+	o	Executes the JAR file, an error message will appear.
+●	java -jar JavaProgram.jar PathOfInputGraphmlFile  -s <node> <node>
+	o	Executes the JAR file and calculates the shortest path between two vertices. 
+●	java -jar JavaProgram.jar PathOfInputGraphmmlFile
+	o	Executes the JAR file and calculates:
+		▪	Number of nodes
+		▪	Number of edges
+		▪	Diameter
+		▪	Connectivity of the network graph
+		▪	NameId attribute for each vertex (the vertex name)
+		▪	Edge attributes for each edge (target, id and weight)
+●	java -jar JavaProgram.jar PathOfInputGraphmlFile -b <node>
+	o	Betweenness calculation of the program argument and the NameId of the vertex have to be passed. The selected vertex serves as parameter for the switch.
+●	java -jar JavaProgram.jar PathOfInputGraphmlFile -a outputfile.graphml
+	o	Calculates all properties and saves them in a separate file with the datatype grapml.
+																			
+									</code>
+								</pre>
+
+
+								<!--FLOW Diagram-->
+								
+
+
+								<!-- Blockquote -->
+								<h2>Gitlab link</h2>
+								<blockquote><a href="https://gitlab.com/mouchen1998/graphnetworkmodel_javaproject" target="_blank">GraphNetworkModel</a></blockquote>
+
+								<hr />
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+
+						<section class="split contact">
+						
+
+
+							<!-- TODO
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+						-->
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/MustaphaOuchen" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://github.com/TheBlur98" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<!--<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
